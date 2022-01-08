@@ -39,7 +39,6 @@ xaringanExtra::use_share_again()
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
   image_url = "https://www.uv.mx/v2/images/logouv.jpg",
-  link_url = "https://www.uv.mx/v2/images/logouv.jpg",
   position = xaringanExtra::css_position(top = "1em", right = "1em")
 )
 ```

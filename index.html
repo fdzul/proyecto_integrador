@@ -83,9 +83,9 @@ top:1em;right:1em;
     } else {
       document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
         .forEach(function (slide) {
-          const logo = document.createElement('a')
+          const logo = document.createElement('div')
           logo.classList = 'xaringan-extra-logo'
-          logo.href = 'https://www.uv.mx/v2/images/logouv.jpg'
+          logo.href = null
           slide.appendChild(logo)
         })
     }
