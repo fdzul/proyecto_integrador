@@ -19,7 +19,7 @@ output:
       countIncrementalSlides: false
 ---
 
-
+class: center, middle
 ```{r xaringan-fit-screen, echo=FALSE}
 xaringanExtra::use_fit_screen()
 ```
@@ -43,7 +43,6 @@ xaringanExtra::use_logo(
 )
 ```
 
-class: center, middle
 ## Planteamiento del Problema
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
