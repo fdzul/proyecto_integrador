@@ -1,0 +1,46 @@
+---
+title: "Desarrollo de un modelo estratégico de focalización del dengue en áreas urbana de México"
+author: "Felipe Antonio Dzul Manzanilla"
+institute: "Especialidad en Métodos Estadísticos"
+date: "2022/12/07 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: 
+      - default
+      - default-fonts
+      - duke-blue
+      - hygge-duke
+      - libs/cc-fonts.css
+      - libs/figure-captions.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
+
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
+```
+
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://www.uv.mx/v2/images/logouv.jpg",
+  link_url = "https://www.uv.mx/v2/images/logouv.jpg",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+```
+##
