@@ -42,10 +42,13 @@ xaringanExtra::use_logo(
   position = xaringanExtra::css_position(top = "1em", right = "1em")
 )
 ```
+
+class: center, middle
 ## Planteamiento del Problema
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
 ---
+class: center, middle
 ## Justificación
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
