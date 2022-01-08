@@ -66,8 +66,10 @@ xaringanExtra::use_logo(
 
 
 ---
-## Hipótesis
+# Hipótesis
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+## La identificación de los hotspots del vector y los hotspots de la transmisión de dengue son factibles y operacionalmente posibles, y su concordancia espacial puede permitir diseñar un modelo estratégico de focalización en las áreas urbanas endémicas de dengue en México que combine la vigilancia entomológica y la vigilancia epidemiológica.
 
 ---
 ## Marco Teórico
