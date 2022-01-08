@@ -102,7 +102,9 @@ La identificación de los hotspots del vector y los hotspots de la transmisión 
 
 - ***celular***    :     228 229 3419
 
-- ***slides***     :     https://fdzul.netlify.app/
+- ***github***     :     [https://github.com/fdzul]()
+
+- ***slides***     :     [https://reverent-khorana-420d9e.netlify.app/#1]()
 
 
 
