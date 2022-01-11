@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Desarrollo de un modelo estratégico de focalización del dengue en áreas urbana de México</title>
+    <title>Desarrollo de un modelo estratégico de focalización del dengue en áreas urbanas de México</title>
     <meta charset="utf-8" />
     <meta name="author" content="Felipe Antonio Dzul Manzanilla" />
+    <meta name="date" content="2022-01-11" />
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
@@ -17,6 +18,29 @@
     <script src="libs/shareon-1.4.1/shareon.min.js"></script>
     <link href="libs/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <script src="libs/viz-1.8.2/viz.js"></script>
+    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+    <link href="libs/vis-4.16.1/vis.min.css" rel="stylesheet" />
+    <script src="libs/vis-4.16.1/vis.min.js"></script>
+    <link href="libs/timeline-0.4/timevis.css" rel="stylesheet" />
+    <script src="libs/timevis-binding-1.0.0/timevis.js"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <style>h1 {font-size: 34px;}
+           h1.title {font-size: 38px;}
+           h2 {font-size: 30px;}
+           h3 {font-size: 24px;}
+           h4 {font-size: 18px;}
+           h5 {font-size: 16px;}
+           h6 {font-size: 12px;}
+           code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+           pre:not([class]) { background-color: white }</style>
     <link rel="stylesheet" href="libs/cc-fonts.css" type="text/css" />
     <link rel="stylesheet" href="libs/figure-captions.css" type="text/css" />
   </head>
@@ -24,10 +48,10 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Desarrollo de un modelo estratégico de focalización del dengue en áreas urbana de México
+# Desarrollo de un modelo estratégico de focalización del dengue en áreas urbanas de México
 ### Felipe Antonio Dzul Manzanilla
 ### Especialidad en Métodos Estadísticos
-### 2022/12/07 (updated: 2022-01-07)
+### 2022-01-11
 
 ---
 
@@ -95,33 +119,133 @@ top:1em;right:1em;
 </div>
 
 ## Planteamiento del Problema
-&lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
+
+---
+### Hotspots de la transmisión del Dengue
+
+&amp;nbsp;
+
+.pull-left[
+
+.large[.justify-left[.blue[Los ***hotspots*** de las arbovirosis transmitidas por ***Aedes aegypti*** son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/ó zika]]]
+
+]
+.pull-right[
+.blue[Hotspots del área urbana de Veracruz]
+&lt;img src = "6.Maps/hotspots_ver.jpg" width="450"&gt;
+]
+
+
+.tiny[.blue[.footnote[Bisanzio  et al 2017; 
+Dzul-Manzanilla et al 2021.]]]
+
+---
+class: center, middle
+### Hotspots de la transmisión del Dengue
+
+&lt;img src="paho_2019/Diapositiva1.JPG" width="1000"&gt;
+
+.tiny[.blue[.footnote[OPS, 2019]]]
+
+---
+class: center, middle
+### Manejo Integrado de Aedes
+
+&lt;figure&gt;
+  &lt;img src="https://journals.plos.org/plosntds/article/figure/image?size=large&amp;id=10.1371/journal.pntd.0006845.g001"&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+.tiny[.blue[.footnote[Roiz et al. 2018; WHO, 2017]]]
+
 
 ---
 class: center, middle
 ## Justificación
-&lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
+ 
+---
+class: center,
+## Justificación
+.pull-left[
+.blue[El desarrollo de un modelo estratégico de focalización de las acciones antivectoriales en las áreas urbanas endémicas de México y su implementación, constituye un elemento clave para redirigir los límitados recursos materiales, humanos y económicos a las áreas de los grandes centros urbanos donde la transmisión se concentra (basados en datos históricos) y donde las cadenas de transmisión son activas (datos actuales).]
+]
+
+.pull-right[
+.blue[Hotspots del área urbana de Xalapa]
+&lt;img src = "6.Maps/intensity_maps_xalapa.jpg" width="450"&gt;
+]
+---
+class: center,
+## Justificación
+&amp;nbsp;
+
+.pull-left[
+
+.large[.justify-left[.blue[Teóricamente, de acuerdo a la ley de Pareto 80/20, si el 80% de la transmisión se concentra en el 20% del área urbana, la focalización de las acciones en el 20% del área, permitiría obtener reducciones del 80% de la carga de la enfermedad.]]]
+
+]
+.pull-right[
+.blue[Hotspots del área urbana de Xalapa]
+&lt;img src = "6.Maps/intensity_maps_xalapa.jpg" width="450"&gt;
+]
+---
+class: center, middle
+### Modelo estratégico de focalización 
+
+&amp;nbsp;
+
+.pull-left[
+.blue[Concepto]
+&lt;img src = "6.Maps/stacked_maps_cases.jpg"&gt;
+
+]
+.pull-right[
+.blue[Mapa de Riesgo]
+&lt;img src = "6.Maps/map_risk_guadalajara.jpg"&gt;
+]
+
+
+.tiny[.blue[.footnote[Dzul-Manzanilla et al 2021.]]]
+---
+### Definición del Modelo estratégico de focalización 
+&amp;nbsp;
+
+.pull-left[
+- .red[**Áreas con riesgo muy alto de transmisión**.] Hotposts de casos + hotspots del vector. 
+
+- .orange[**Áreas con riesgo alto de transmisión**.]  Hotspots de transmisión de casos.
+
+- .yellow[**Áreas con riesgo medio de transmisión**.] Hotspots del vector.
+
+- .green[**Áreas con riesgo bajo de transmisión**]. Sin hotspots del vector o hotspots de casos.
+]
+
+.pull-right[
+Guadalajara
+&lt;img src="6.maps/map_risk_guadalajara.jpg" width="90%" /&gt;
+]
 
 ---
+class: center, middle
 ## Objetivo General
 &lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
-### - Desarollar un modelo estratégico de focalización del dengue en las áreas endémicas urbanas de México
+### Desarollar un modelo estratégico de focalización del dengue en las áreas endémicas urbanas de México
 
 ---
-## Objetivo Específicos 
+## Objetivos Específicos 
 &lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
 
-### - Determinar los hotspots del vector del dengue en México.
+ - Determinar los hotspots del vector del dengue en México.
 
-### - Determinar los hotspots de la transmisón de dengue.
+ - Determinar los hotspots de la transmisón de dengue.
 
-### - Desarrollar un modelo de estratificación que incluya los hotspots del vector y los hotspots de los casos.
+ - Desarrollar un modelo de estratificación que incluya los hotspots del vector y los hotspots de los casos.
 
-### - Desarrollar un paquete en R para que el personal de salud del programa de prevención de dengue realice los hotspots del vector del dengue.
+- Desarrollar un paquete en R para que el personal de salud del programa de prevención de dengue realice los hotspots del vector del dengue.
 
-### - Desarrollar un paquete en R para que el personal de salud del programa de prevención de dengue realice los hotspots de los casos de dengue.
+- Desarrollar un paquete en R para que el personal de salud del programa de prevención de dengue realice los hotspots de los casos de dengue.
 
-### - Escribir un manual para la identificación de los hotspots del vector del dengue
+- Escribir un manual para la identificación de los hotspots del vector del dengue
 
 
 ---
@@ -130,20 +254,99 @@ class: center, middle
 
 La identificación de los hotspots del vector y los hotspots de la transmisión de dengue son factibles y operacionalmente posibles, y su concordancia espacial puede permitir diseñar un modelo estratégico de focalización en las áreas urbanas endémicas de dengue en México que combine la vigilancia entomológica y la vigilancia epidemiológica.
 
+
 ---
+class: 
 ## Marco Teórico
-&lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
 
+### Antecedentes 
+
+- Transmisión del dengue en México
+- Transmisión de Chikungunya y Zika en México
+Estratificación
+
+### Estratificación 
+
+- Estratificación epidemiológica del dengue en Mexico 
+
+- Estratificación entomológica del dengue en Mexico 
+
+- Estratificación epidemiológica y entomológica del dengue en Mexico 
+
+### Análisis espacial
+
+- Análisis espacial aplicado a la salud pública y la epidemiología
+
+- Epidemiología espacial
+
+- Datos espaciales
+
+- Software libre para el análisis espacial
 
 ---
+class: center, middle
 ## Propuesta Metodológica
 &lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
+---
+class: center, middle
 
+### Hotspots de la Transmisión de Dengue
+.pull-left[
+1. Bajar las bases de datos del **[SINAVE](https://www.sinave.gob.mx/)**.
+2. Geocodificar las bases.
+3. Bajar los shapefile del **[INEGI](https://www.inegi.org.mx/)**.
+4. Seleccionar la localidad de interes y extraer los AGEBs.
+5. Contar el número de casos por AGEB.
+6. Cálcular el Z-score de los casos.
+7. Generar la matriz de adjacencias.
+8. Cálcular el estadístico espacial local Getis&amp;Ord `\(\color{#2ECC40}G_{\color{#2ECC40}i}^{\color{#2ECC40}*}\)`.
+9. Realizar la la corrección de Bonferroni.
+10. Cálcular los hotspots.
+11. Visualizar los hotspots.
+]
+.pull-right[
+<div id="htmlwidget-199271af327ffd6fdd2c" style="width:100%;height:550px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-199271af327ffd6fdd2c">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  # flowchart for hotspots\n  sinave [label = \"SINAVE\",  fillcolor = \"SeaGreen\", color = \"white\", fontcolor = \"white\"]\n  denv [label = \"Bases de DENV\",  fillcolor = \"SeaGreen\", color = \"white\", fontcolor = \"white\"]\n  geocode [label = \"Geocodificación\",  fillcolor = \"SeaGreen\", color = \"white\", fontcolor = \"white\"]\n  cases_ageb [label = \"Casos por AGEBs\"]\n  z_score [label = \"Z-score\"]\n  gi [label = \"Estadístico Espacial Local (Gi*)\"]\n  bonferroni [label = \"Corrección de Bonferroni\"]\n  hotspots [label = \"Hotspots\", style = filled, color = orange]\n  \n  # flow chart for inegi\n  inegi [label = \"INEGI\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  loc [label = \"Localidades Shapefile\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  ageb [label = \"AGEB Shapefile\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  loc_esp [label = \"Localidad de Ínteres\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  ageb_esp [label = \"AGEBs de la Localidad de Ínteres\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  mat [label = \"Matriz de Adjacencias\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  \n  # edge definitions with the node IDs\n  edge [color = black]\n  sinave -> denv -> geocode -> cases_ageb -> z_score -> gi -> bonferroni -> hotspots \n  inegi -> {ageb, loc}\n  loc -> loc_esp -> ageb_esp\n  ageb -> ageb_esp\n  ageb_esp -> mat\n  mat -> cases_ageb \n \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+]
+---
+### Hotspots del Vector
+
+<div id="htmlwidget-79a5e447bc97e3427303" style="width:90%;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-79a5e447bc97e3427303">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  #\n  cenaprece [label = \"CENAPRECE\",  fillcolor = \"SeaGreen\", color = \"white\", fontcolor = \"white\"]\n  ovitrap [label = \"Ovitrampas\",  fillcolor = \"SeaGreen\", color = \"white\", fontcolor = \"white\"]\n  coord [label = \"Coordenadas\",  fillcolor = \"SeaGreen\", color = \"white\", fontcolor = \"white\"]\n  ovicoord [label = \"ovi + coord\"]\n  \n  # flow chart for inegi\n  inegi [label = \"INEGI\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n  loc [label = \"Localidades Shapefile\", fillcolor = \"DeepSkyBlue\", color = \"white\", fontcolor = \"black\"]\n\n  ###\n  mesh [label = \"1. Mesh\"]\n  spde [label = \"2. SPDE\"]\n  \n  proj_train [label = \"3a. Projector Matrix A. Test\"]\n  proj_test [label = \"3b. Projector Matrix A. Train\"]\n  \n  spatial_field [label = \"4. Spatial Field W\"]\n  \n  stack_train [label = \"5a. Stack Train\"]\n  stack_test [label = \"5b. Stack Test\"]\n  stack_pred [label = \"5c. Stack Prediction\"]\n  stack_joint [label = \"6. Joint Stack\"]\n  \n  formula [label = \"7. Formula\"]\n  inla [label = \"8. INLA\",  fillcolor = \"Orange\", color = \"white\", fontcolor = \"white\"]\n  \n \n  \n  # edge definitions with the node IDs\n  edge [color = black]\n  cenaprece -> {ovitrap, coord} -> ovicoord\n  #\n  inegi -> loc -> ovicoord\n  #\n  ovicoord -> mesh\n  mesh -> spde -> spatial_field ->  stack_joint\n  spde -> {proj_train,  proj_test}\n  spatial_field -> {stack_test, stack_train, stack_pred} ->  stack_joint -> formula -> inla \n  proj_train -> stack_train\n  proj_test -> stack_test\n\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
-## Cronograma
-&lt;hr style="height:2px;border-width:0;color:#330019;background-color:#330019"&gt; 
 
+### Hotspots del Vector
+
+<div id="htmlwidget-0c0f2a2a199f6f1468f4" style="width:90%;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0c0f2a2a199f6f1468f4">{"x":{"diagram":"digraph {\n\n  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey] \n  \n  #\n  \n  inla [label = \"8. INLA\",  fillcolor = \"Orange\", color = \"white\", fontcolor = \"white\"]\n  stat [label = \"9. Statistics\"]\n  \n  zeros [label = \"9.1. % Zeros\"]\n  disp [label = \"9.2. Dispersion Statistics\"]\n  dic [label = \"9.3. Deviance Information Criterio\"]\n  pear [label = \"9.4. Pearson Residuals\"]\n  \n  ##\n  p [label = \"Poisson\"]\n  zip [label = \"ZeroInflated Poisson\"]\n  nb [label = \"Negative Binomial\"]\n  zinb [label = \"ZeroInflated Poisson Negative Binomial\"]\n  \n  sel [label = \"10.Select the Distribution & Model\"]\n  \n  # prediction ####\n  ext_pred [label = \"11. Extract Index Prediction\"]\n  coor_pred [label = \"12. Extract Coordinates Prediction\"]\n  pred [label = \"13. Prediction\"]\n \n  hotspots [label = \"14.Hotspots\", fillcolor = \"Orange\", color = \"white\", fontcolor = \"white\"]\n  save [label = \"15. Save results\"]\n  \n  mappred [label = \"15a. Prediction Map\"]\n  hotspotsb [label = \"15b. Hotspots\"]\n  dics [label = \"15c. DICs\"]\n  loc [label = \"15d. Locality\"]\n  data [label = \"15e. Dataset\"]\n  \n  # edge definitions with the node IDs\n  edge [color = black]\n  inla -> stat\n  stat -> {zeros, disp, dic,pear} -> {p, zip, nb, zinb} -> sel\n  sel -> ext_pred -> coor_pred -> pred -> hotspots -> save\n  save -> {mappred, hotspotsb, dics, loc, data}\n\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+---
+class: center, middle
+## Cronograma de Actividades
+
+<div id="htmlwidget-6625cdcdce6df6ab285c" class="timevis html-widget" style="width:100%;height:2100px;">
+<div class="btn-group zoom-menu">
+<button type="button" class="btn btn-default btn-lg zoom-in" title="Zoom in">+</button>
+<button type="button" class="btn btn-default btn-lg zoom-out" title="Zoom out">-</button>
+</div>
+</div>
+<script type="application/json" data-for="htmlwidget-6625cdcdce6df6ab285c">{"x":{"items":[{"start":"2021-06-01","end":"2021-08-31","content":"Manejo de la Información & Bases de Datos","style":"text-align: center; font-weight: bold; color: black; font-size: 15px; border-color: darkred; border: 2px solid black; background-color: firebrick;","group":"1"},{"start":"2021-08-01","end":"2021-08-31","content":"Identificación de Localidades","style":"text-align: center; font-weight: bold; color: black; font-size: 15px; border-color: darkblue; border: 2px solid black; background-color: firebrick;","group":"1"},{"start":"2021-08-01","end":"2022-01-31","content":"Predicción del Número de Huevos","style":"text-align: center; font-weight: bold; color: black; font-size: 15px; border-color: darkblue; border: 2px solid black; background-color: firebrick;","group":"1"},{"start":"2021-09-01","end":"2022-01-31","content":"Hotspots del Vector","style":"text-align: center; font-weight: bold; color: black; font-size: 15px; border-color: darkgreen; border: 2px solid black; background-color: firebrick;","group":"1"},{"start":"2021-07-01","end":"2021-08-31","content":"Geocodificación de Casos","style":"text-align: center; font-weight: bold; color: black; font-size: 15px; border-color: darkorange; border: 2px solid black; background-color: dodgerblue;","group":"2"},{"start":"2021-09-01","end":"2022-01-31","content":"Hotspots de Casos","style":"text-align: left; font-weight: bold; color: black; font-size: 15px; border-color: darkorange; border: 1.5px solid black; background-color: dodgerblue;","group":"2"},{"start":"2022-02-01","end":"2022-04-31","content":"Concordancia Espacial","style":"text-align: righ; font-weight: bold; color: black; font-size: 15px; border-color: darkorange; border: 1px solid gray; background-color: darkgreen;","group":"3"},{"start":"2022-03-01","end":"2022-06-01","content":"Modelo de Estratificación","style":"text-align: righ; font-weight: bold; color: black; font-size: 15px; border-color: darkorange; border: 1px solid gray; background-color: darkorange;","group":"4"}],"groups":[{"id":"1","content":"Objetivo I","style":"text-align: center; font-weight: bold; color: black; font-size: 20px; border-color: darkred; border: 2px solid black; background-color: firebrick;"},{"id":"2","content":"Objetivo II","style":"text-align: center; font-weight: bold; color: black; font-size: 20px; border-color: darkblue; border: 2px solid black; background-color: dodgerblue;"},{"id":"3","content":"Objetivo III","style":"text-align: center; font-weight: bold; color: black; font-size: 20px; border-color: darkgreen; border: 2px solid black; background-color: darkgreen;"},{"id":"4","content":"Objetivo IV","style":"vertical-align: middle; text-align: center; font-weight: bold; color: black; font-size: 20px; border-color: darkorange; border: 2px solid black; background-color: darkorange;"}],"showZoom":true,"zoomFactor":0.5,"fit":true,"options":[],"height":null,"timezone":null,"api":[]},"evals":[],"jsHooks":[]}</script>
+---
+## Resultados Preliminares
+
+- Hotspots de la transmisión del dengue en 13 localidades de Veracruz
+- Hotspots del vector en 10 localidades de Veracruz.
+- Aplicación del modelo de focalización en 10 localidades de Veracruz.
+
+
+- [Manual de identificación de los hotspots](https://fdzul.github.io/manual_hotspots/)
+
+- Un paquete en R para la identificación de los hotspot de casos
+[denhotspots](https://github.com/fdzul/denhotspots)
+
+- Un paquete en R para la identificación de hotspots del vector
+[deneggs](https://github.com/fdzul/deneggs)
 
 ---
 # Thanks!
